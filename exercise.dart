@@ -46,9 +46,30 @@ void main() {
   var units = 267;
   var amount, totalAmount, surCharge;
 
+  if (units <= 50) {
+    amount = units * 0.50;
+  } else if (units < 150) {
+    amount = 25 + ((units - 50) * 0.75);
+  } else if (units <= 250) {
+    amount = 100 + ((units - 150) * 1.20);
+  } else {
+    amount = 220 + ((units - 250) * 1.50);
+  }
+  surCharge = amount * 0.20;
+  dynamic intialAmount = amount + surCharge;
+  print('Electricity bill = \R${intialAmount.toString()}');
+
   //Question 3
 
   //Use the variable below and indicate whether or not the value is divisible by 3 (use a switch)
 
-  const value = 29;
+  const value = 9;
+  switch (value % 3) {
+    case 0:
+      print('The value $value is divisible by 3');
+      break;
+
+    default:
+      print('The value $value is not divisible by 3');
+  }
 }
