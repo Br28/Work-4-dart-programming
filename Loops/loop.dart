@@ -1,5 +1,5 @@
 void main() {
-  // While Loop
+  // While Loop - pre test loop
   print('\n********************* While Loop ****************************\n');
 
   int x = 0;
@@ -8,7 +8,7 @@ void main() {
     x++;
   }
 
-  // D0-while Loop
+  // D0-while Loop - post test loop
   print('\n******************** Do-While Loop *****************************\n');
 
   int y = 0;
@@ -21,5 +21,9 @@ void main() {
 
   for (int z = 0; z < 3; z++) {
     print('Hello world');
+  }
+
+  for (int a = 0; a < 4; a++) {
+    print('Hello $a');
   }
 }
